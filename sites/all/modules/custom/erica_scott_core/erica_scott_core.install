@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Install file for erica_scott_core().
+ */
+function erica_scott_core_7000() {
+	$modules = array(
+		'admin_menu',
+		'devel',
+		'contact',
+		'contact_forms',
+		'features',
+		'strongarm',
+		'panelizer',
+		'module_filter',
+		'context',
+		'context_ui',
+	);
+
+	module_enable($modules);
+	theme_enable('erica_scott_theme');
+}

@@ -1,0 +1,30 @@
+<?php
+/**
+ *
+ * @file
+ * Module file for erica_scott_core().
+ */
+function erica_scott_core_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
+	$form['subject']['#type'] = 'hidden';
+	$form['subject']['#value'] = t('Contact Me');
+
+	$description = array(
+		'#type' => 'markup',
+		'#markup' => t('Please fill out the following form to contact Erica Scott.'),
+	);
+
+	$form = array_slice($form, 0, 1, TRUE) + array('description' => $description) + array_slice($form, 1, count($form) - 1, TRUE);
+
+	$form['name']['#title'] = t('Name');
+
+	$full_name = array(
+		'#type' => 'markup',
+		'#markup' => t('Your Full Name.'),
+	);
+
+	$form['mail']['#title'] = t('Email');
+
+	$form['actions']['submit']['#value'] = t('Send Email');
+
+	return $form;
+}

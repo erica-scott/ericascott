@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Erica Scott Feature feature.
+ */
+
+include_once 'erica_scott_feature.features.inc';
