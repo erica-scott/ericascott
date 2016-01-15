@@ -4,6 +4,10 @@
  * @file
  * Module file for erica_scott_core().
  */
+
+/**
+ * Implements hook_form_alter().
+ */
 function erica_scott_core_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
 	$form['subject']['#type'] = 'hidden';
 	$form['subject']['#value'] = t('Contact Me');

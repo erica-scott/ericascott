@@ -15,6 +15,10 @@ function erica_scott_core_7000() {
 		'module_filter',
 		'context',
 		'context_ui',
+		'modal_forms',
+		'jquery_update',
+		'dialog',
+		'popup',
 	);
 
 	module_enable($modules);
